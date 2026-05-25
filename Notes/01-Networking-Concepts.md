@@ -41,3 +41,22 @@ These are the core hardware components used to connect devices and secure data a
 
 * **Wireless LAN Controller:** A centralized device used by network administrators to manage multiple Wireless Access Points easily.
 
+
+## Video: Networking Functions
+
+These are core services and mechanisms used to optimize, secure, and control how data flows across a network.
+
+### Key Concepts to Know:
+
+* **CDN (Content Delivery Network):** Caches website data on servers all over the world. It brings data geographically closer to the user so websites load faster.
+* **VPN (Virtual Private Network):** Creates an encrypted tunnel over the public internet to protect data privacy.
+* **QoS (Quality of Service):** Prioritizes certain types of network traffic over others. (For example, making sure voice calls stay clear even if someone else is downloading a massive file).
+* **TTL (Time to Live) & Routing Loops:** A mechanism that prevents data packets from circulating infinitely in a loop between routers if a route misconfiguration occurs.
+
+### How to Check TTL (Command Line Basics):
+A router can accidentally send a packet back and forth to another router forever (a **Routing Loop**). To stop this, every packet starts with a **TTL number** (like 64 or 128). Every time the packet passes through a router, that number drops by 1. If it hits 0, the packet drops dead.
+
+Following commands can be used to test and see this behavior live in your command prompt:
+1. `ping [IP or Website]` -> It shows you the remaining TTL of the packet when it returns to you.
+2. `traceroute [IP or Website]` -> It intentionally uses increasing TTL values (starting at 1) to force each router along the path to drop the packet and report back, mapping the exact path to a destination. If there is a routing loop, you will see the same two IP addresses bouncing back and forth over and over.
+
