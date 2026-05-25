@@ -1,7 +1,7 @@
 # Domain 1: Networking Concepts
 
 
-## Video: Introduction to the OSI Model
+## Introduction to the OSI Model
 
 The OSI model is a 7-layer framework that handles how data moves across a network. It is used to troubleshoot network issues.
 
@@ -19,7 +19,7 @@ The OSI model is a 7-layer framework that handles how data moves across a networ
 * **A**way -> Layer 7: Application (HTTP, Browsers)
 
 
-## Video: Network Devices
+## Network Devices
 
 These are the core hardware components used to connect devices and secure data across a network.
 
@@ -42,7 +42,7 @@ These are the core hardware components used to connect devices and secure data a
 * **Wireless LAN Controller:** A centralized device used by network administrators to manage multiple Wireless Access Points easily.
 
 
-## Video: Networking Functions
+## Networking Functions
 
 These are core services and mechanisms used to optimize, secure, and control how data flows across a network.
 
@@ -56,7 +56,7 @@ These are core services and mechanisms used to optimize, secure, and control how
 ### How to Check TTL (Command Line Basics):
 A router can accidentally send a packet back and forth to another router forever (a **Routing Loop**). To stop this, every packet starts with a **TTL number** (like 64 or 128). Every time the packet passes through a router, that number drops by 1. If it hits 0, the packet drops dead.
 
-Following commands can be used to test and see this behavior live in your command prompt:
+Following commands can be used to test and see this behavior live in the command prompt:
 1. `ping [IP or Website]` -> It shows you the remaining TTL of the packet when it returns to you.
-2. `traceroute [IP or Website]` -> It intentionally uses increasing TTL values (starting at 1) to force each router along the path to drop the packet and report back, mapping the exact path to a destination. If there is a routing loop, you will see the same two IP addresses bouncing back and forth over and over.
+2. `traceroute [IP or Website]` -> It Intentionally uses increasing TTL values (starting at 1) to force each router along the path to drop the packet and report back, mapping the exact path to a destination. If there is a routing loop, you will see the same two IP addresses bouncing back and forth over and over.
 
