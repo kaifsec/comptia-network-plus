@@ -1,6 +1,5 @@
 # Domain 1: Networking Concepts
 
-
 ## Introduction to the OSI Model
 
 The OSI model is a 7-layer framework that handles how data moves across a network. It is used to troubleshoot network issues.
@@ -17,7 +16,6 @@ The OSI model is a 7-layer framework that handles how data moves across a networ
 * **S**ausage -> Layer 5: Session (Control protocols)
 * **P**izza -> Layer 6: Presentation (Encryption)
 * **A**way -> Layer 7: Application (HTTP, Browsers)
-
 
 ## Network Devices
 
@@ -41,7 +39,6 @@ These are the core hardware components used to connect devices and secure data a
 
 * **Wireless LAN Controller:** A centralized device used by network administrators to manage multiple Wireless Access Points easily.
 
-
 ## Networking Functions
 
 These are core services and mechanisms used to optimize, secure, and control how data flows across a network.
@@ -60,3 +57,24 @@ Following commands can be used to test and see this behavior live in the command
 1. `ping [IP or Website]` -> It shows you the remaining TTL of the packet when it returns to you.
 2. `traceroute [IP or Website]` -> It Intentionally uses increasing TTL values (starting at 1) to force each router along the path to drop the packet and report back, mapping the exact path to a destination. If there is a routing loop, you will see the same two IP addresses bouncing back and forth over and over.
 
+## Designing the Cloud
+
+Cloud computing shifts networking from physical hardware to virtualized, software-defined environments that can be deployed instantly.
+
+### Core Cloud Characteristics
+* **One-Click Deployment:** Infrastructure can be spun up or torn down in seconds using cloud consoles or automation scripts.
+* **Elasticity:** The network can automatically grow or shrink its resources based on real-time demand (e.g., handling a sudden spike in website traffic).
+* **Scalability:** The long-term capacity of the network can easily scale up to handle massive, permanent growth without needing to buy new physical servers.
+* **Multi-Tenancy:** Multiple different customers (tenants) share the same underlying physical server hardware, but their data is completely isolated from one another.
+
+### Cloud Isolation and Connectivity
+* **VPC (Virtual Private Cloud):** A private, isolated network section created inside a public cloud provider (like AWS). It acts like your own virtual data center.
+* **vNF (Virtual Network Function):** Running traditional network services (like routers, firewalls, or load balancers) as virtual software machines instead of physical hardware appliances.
+* **Transit Gateway:** A cloud router used to easily interconnect multiple VPCs and on-premise networks together through a single central hub.
+
+### Cloud Gateways and Security
+* **VPN Gateway:** Securely connects your physical on-premise office or home computer to your cloud VPC over an encrypted internet tunnel.
+* **NAT Gateway:** Allows private devices inside a VPC to connect out to the internet (for updates, etc.) while completely blocking the internet from initiating a connection back into them.
+* **VPC Endpoint:** Allows devices inside your private VPC to securely connect to other cloud provider services without their data ever leaving the private cloud network.
+* **Network Security Group:** A virtual firewall that controls traffic at the **instance/host level** (like a single virtual server).
+* **Network Security List (NACL):** A virtual firewall that controls traffic at the **subnet level** (protecting a whole group of virtual servers).
