@@ -99,3 +99,26 @@ When you move to the cloud, security is a partnership. The Shared Responsibility
 * **Provider Responsibility:** Usually responsible for the physical security of the data centers, hardware, virtualization layer, and global infrastructure ("Security **of** the cloud").
 * **Customer Responsibility:** You are always responsible for your own data, user accounts, permissions, and passwords ("Security **in** the cloud").
 * **The Rule:** The more "as a Service" you go (moving from IaaS -> PaaS -> SaaS), the *more* responsibility shifts to the provider, and the *less* you have to manage yourself.
+
+## Introduction to IP and Transport Protocols
+
+Data moving across a network acts like a series of moving vans. The network infrastructure provides the roads, the Internet Protocol (IP) acts as the delivery truck, and the boxes inside hold the data packets.
+
+### Data Encapsulation
+* Data is wrapped inside layers like Russian nesting dolls (Data goes inside TCP/UDP, which goes inside IP, which goes inside an Ethernet frame).
+
+### TCP vs. UDP (Layer 4 Protocols)
+* **TCP (Transmission Control Protocol):** Connection-oriented. It requires a formal handshake to set up and close connections. It guarantees reliable delivery by recovering from data errors and managing data flow control.
+* **UDP (User Datagram Protocol):** Connectionless. It drops data onto the network without checking if the receiver is ready. It provides fast, "unreliable" delivery with no error recovery or flow control.
+
+
+### Ports and Sockets
+* **IP Address:** Like a house address. It gets the delivery truck to the correct computer system.
+* **Port Number:** Like a specific room name inside the house. It tells the system exactly which application or service should receive the data box.
+* **Sockets:** The complete communication path, consisting of an IP address, a protocol (TCP or UDP), and a port number (e.g., `10.0.0.1 : TCP : 80`).
+
+### Port Ranges (0 to 65,535)
+* **Non-Ephemeral Ports:** Permanent port numbers assigned to standard server applications (Ports 0 through 1,023). 
+  * *Examples:* Web servers (`TCP 80`), Email servers (`TCP 143`).
+* **Ephemeral Ports:** Temporary port numbers automatically assigned on-the-fly by the client's computer to track a specific conversation (Ports 1,024 through 65,535).
+
