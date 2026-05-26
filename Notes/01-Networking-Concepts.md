@@ -78,3 +78,24 @@ Cloud computing shifts networking from physical hardware to virtualized, softwar
 * **VPC Endpoint:** Allows devices inside your private VPC to securely connect to other cloud provider services without their data ever leaving the private cloud network.
 * **Network Security Group:** A virtual firewall that controls traffic at the **instance/host level** (like a single virtual server).
 * **Network Security List (NACL):** A virtual firewall that controls traffic at the **subnet level** (protecting a whole group of virtual servers).
+
+## Cloud Models
+
+Cloud computing is categorized by how it is deployed and what level of management the cloud provider handles versus what you handle.
+
+### Cloud Deployment Models
+* **Public Cloud:** Infrastructure owned and operated by a third-party provider (like AWS, Microsoft Azure, or Google Cloud) and shared with multiple organizations over the public internet.
+* **Private Cloud:** Virtualized infrastructure built exclusively for a single organization. It can be hosted in their own physical data center or by a third party.
+* **Hybrid Cloud:** A mix of both public and private clouds, allowing data and applications to be shared between them.
+
+### Cloud Service Models (SaaS, PaaS, IaaS)
+* **IaaS (Infrastructure as a Service):** You rent the basic building blocks like virtual servers, storage, and networking hardware. You are responsible for installing the operating system, security, and data. (Example: AWS EC2, Azure VMs).
+* **PaaS (Platform as a Service):** The provider handles the hardware and the operating system. They give you a platform to deploy your code without worrying about server management. (Example: Heroku, AWS Elastic Beanstalk).
+* **SaaS (Software as a Service):** A complete, fully managed software application that you access over the internet. You only manage your user settings. (Example: Microsoft 365, Gmail).
+
+### Shared Responsibility Matrix
+When you move to the cloud, security is a partnership. The Shared Responsibility Matrix dictates who is responsible for what based on the service model you use:
+
+* **Provider Responsibility:** Usually responsible for the physical security of the data centers, hardware, virtualization layer, and global infrastructure ("Security **of** the cloud").
+* **Customer Responsibility:** You are always responsible for your own data, user accounts, permissions, and passwords ("Security **in** the cloud").
+* **The Rule:** The more "as a Service" you go (moving from IaaS -> PaaS -> SaaS), the *more* responsibility shifts to the provider, and the *less* you have to manage yourself.
