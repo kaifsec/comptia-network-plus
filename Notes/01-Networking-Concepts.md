@@ -122,3 +122,32 @@ Data moving across a network acts like a series of moving vans. The network infr
   * *Examples:* Web servers (`TCP 80`), Email servers (`TCP 143`).
 * **Ephemeral Ports:** Temporary port numbers automatically assigned on-the-fly by the client's computer to track a specific conversation (Ports 1,024 through 65,535).
 
+## Common Ports
+
+Ports are like virtual doors that let specific types of network traffic enter or leave a device. 
+
+### Web and Remote Access Ports
+* **SSH (Secure Shell) -> TCP 22:** Encrypted remote console access. Used to securely manage routers and servers from a distance.
+* **Telnet -> TCP 23:** Insecure, unencrypted remote console access. In cybersecurity, we avoid this because everything is sent in plain text.
+* **HTTP (Hypertext Transfer Protocol) -> TCP 80:** Insecure web browsing.
+* **HTTPS (HTTP Secure) -> TCP 443:** Secure, encrypted web browsing.
+* **RDP (Remote Desktop Protocol) -> TCP 3389:** Graphical remote access. Let's you view and control a virtual or remote desktop screen.
+
+### File and Media Transfer Ports
+* **FTP (File Transfer Protocol) -> TCP 20/21:** Insecure file transfer. Uses port 21 for control commands and port 20 for the actual data.
+* **SFTP (SSH File Transfer Protocol) -> TCP 22:** Uses SSH to transfer files securely over a single port.
+* **TFTP (Trivial File Transfer Protocol) -> UDP 69:** A very basic, simple file transfer protocol with no authentication. Uses UDP because it's fast.
+* **SMB (Server Message Block) -> TCP 445:** Used by Windows networks for sharing files and printers locally.
+
+### Infrastructure and Management Ports
+* **DNS (Domain Name System) -> UDP/TCP 53:** Converts website names (like google.com) into IP addresses. Uses UDP for quick queries, and TCP for heavy transfers.
+* **DHCP (Dynamic Host Configuration Protocol) -> UDP 67/68:** Automatically assigns IP addresses, subnet masks, and gateways to devices when they connect to the network.
+* **SNMP (Simple Network Management Protocol) -> UDP 161/162:** Used by network engineers to gather metrics and monitor the health of routers, switches, and servers.
+
+### Email Ports
+* **SMTP -> TCP 25:** Used to *send* mail from a client to a server. (Insecure/Plain text).
+* **Secure SMTP (SMTPS) -> TCP 465:** Uses TLS to *send* email securely with encryption.
+* **POP3 -> TCP 110:** Downloads emails to a single device and deletes them from the server. (Insecure/Plain text).
+* **Secure POP3 -> TCP 995:** Uses TLS to download emails securely.
+* **IMAP -> TCP 143:** Syncs emails across multiple devices while keeping them on the server. (Insecure/Plain text).
+* **Secure IMAP -> TCP 993:** Uses TLS to sync emails across devices securely.
