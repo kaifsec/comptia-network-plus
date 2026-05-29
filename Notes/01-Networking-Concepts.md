@@ -144,6 +144,31 @@ Ports are like virtual doors that let specific types of network traffic enter or
 * **DHCP (Dynamic Host Configuration Protocol) -> UDP 67/68:** Automatically assigns IP addresses, subnet masks, and gateways to devices when they connect to the network.
 * **SNMP (Simple Network Management Protocol) -> UDP 161/162:** Used by network engineers to gather metrics and monitor the health of routers, switches, and servers.
 
+
+## ICMP and IPsec (Network Security and Diagnostics)
+
+These protocols are used to send administrative control messages and fully secure Layer 3 IP traffic across untrusted public networks.
+
+### ICMP (Internet Control Message Protocol)
+* **What it is:** Acts like text messaging for your network devices. It is used for diagnostics and error reporting, not for transferring raw application data.
+* **How it works:** Devices use it to request and reply to basic status checks (like saying *"Hey, are you there?"*). It also alerts devices when things fail (like letting a router know a packet's **Time to Live (TTL)** has expired).
+
+### IPsec (Internet Protocol Security)
+Provides authentication, data integrity, and encryption directly at the network layer (OSI Layer 3). It ensures that every packet moving through a network tunnel is safe from tampering or eavesdropping.
+
+### The Two Core IPsec Protocols:
+* **AH (Authentication Header):** Digitally signs the data packet to prove exactly who sent it and ensures the data wasn't changed. **Crucial:** AH does *not* encrypt the data; the text remains readable.
+* **ESP (Encapsulation Security Payload):** Fully encrypts the data packet (using algorithms like AES) so hackers cannot read it, while also providing authentication.
+
+### IPsec Working Modes:
+* **Transport Mode:** Only the internal data payload is encrypted. The original IP header remains visible. (Used for basic device-to-device communication).
+* **Tunnel Mode:** The *entire* original packet (Header + Data) is fully encrypted and stuffed inside a brand new IP packet. (Used for Site-to-Site VPNs over the internet).
+
+### IKE (Internet Key Exchange) -> UDP 500
+The protocol that automatically sets up the secure connection between two IPsec devices. 
+* **Phase 1:** Uses a Diffie-Hellman handshake to build a basic secure tunnel (ISAKMP) to safely talk.
+* **Phase 2:** Uses that safe tunnel to negotiate the final, heavy-duty encryption keys used for the actual data tunnel (ESP).
+
 ### Email Ports
 * **SMTP -> TCP 25:** Used to *send* mail from a client to a server. (Insecure/Plain text).
 * **Secure SMTP (SMTPS) -> TCP 465:** Uses TLS to *send* email securely with encryption.
@@ -151,3 +176,5 @@ Ports are like virtual doors that let specific types of network traffic enter or
 * **Secure POP3 -> TCP 995:** Uses TLS to download emails securely.
 * **IMAP -> TCP 143:** Syncs emails across multiple devices while keeping them on the server. (Insecure/Plain text).
 * **Secure IMAP -> TCP 993:** Uses TLS to sync emails across devices securely.
+
+
