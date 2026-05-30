@@ -178,3 +178,24 @@ The protocol that automatically sets up the secure connection between two IPsec 
 * **Secure IMAP -> TCP 993:** Uses TLS to sync emails across devices securely.
 
 
+## Network Communication Types
+
+IPv4 and IPv6 use different methods to direct traffic to single devices, specific groups, or every device on a network segment.
+
+### 1. Unicast (One-to-One)
+* **What it is:** Data is sent from a single source device directly to a single destination device.
+* **Use Case:** Loading a webpage, checking your personal email, or downloading a file. This is the most common type of network traffic.
+
+### 2. Broadcast (One-to-All)
+* **What it is:** One device sends a data frame to *every single device* on the local network segment (the collision/broadcast domain) at once. 
+* **Use Case:** Used by **DHCP** when a new phone connects and shouts out to find the router. 
+* **Note:** Broadcast traffic only exists in **IPv4**. It was completely removed in IPv6 because it causes too much network noise.
+
+### 3. Multicast (One-to-Many)
+* **What it is:** Data is sent from one source to a specific, selected group of interested devices that choose to listen.
+* **Use Case:** Live video streaming (like watching a live match or a lecture), video conferencing, or routing protocol updates.
+
+### 4. Anycast (One-to-Closest)
+* **What it is:** Multiple servers across the world share the exact same IP address. When a client sends a request, routers automatically send it to the geographically **closest** server.
+* **Use Case:** Used heavily by **DNS** servers and **CDNs** to make sure global websites load instantly no matter what country you are in.
+
