@@ -199,3 +199,22 @@ IPv4 and IPv6 use different methods to direct traffic to single devices, specifi
 * **What it is:** Multiple servers across the world share the exact same IP address. When a client sends a request, routers automatically send it to the geographically **closest** server.
 * **Use Case:** Used heavily by **DNS** servers and **CDNs** to make sure global websites load instantly no matter what country you are in.
 
+## Wireless and Cellular Networking
+
+Wireless technologies use radio frequencies to transmit data through the air instead of physical copper or fiber cabling.
+
+### 1. Wi-Fi Standards (802.11)
+Wireless local area networks are defined by the IEEE 802.11 standards. Modern generations use simplified marketing names:
+* **802.11n (Wi-Fi 4):** Operates at both 2.4 GHz and 5 GHz frequencies. Speeds range from 72 to 600 Mbit/s.
+* **802.11ac (Wi-Fi 5):** Operates exclusively on the 5 GHz band. Offers higher bandwidth, reaching up to 6,933 Mbit/s.
+* **802.11ax (Wi-Fi 6 and 6E):** Adds the 6 GHz band (in 6E). Drastically improves efficiency in crowded areas, reaching up to 9,608 Mbit/s.
+* **802.11be (Wi-Fi 7):** The newest standard operating across 2.4, 5, and 6 GHz. Designed for ultra-high speeds, reaching up to 46,120 Mbit/s.
+
+### 2. Cellular Networks (4G and 5G)
+* **LTE (Long Term Evolution):** A converged "4G" standard based on GSM technologies. Supports baseline download speeds of 150 Mbit/s.
+* **LTE Advanced (LTE-A):** An upgrade to standard LTE, doubling maximum download speeds to 300 Mbit/s.
+* **5G (Fifth Generation):** Launched globally in 2020. Operates at much higher frequencies, eventually targeting speeds up to 10 Gbps. It drastically reduces network constraints for Internet of Things (IoT) devices.
+
+### 3. Satellite Networking
+* **What it is:** Non-terrestrial communication connecting a ground-based dish antenna to a satellite orbiting Earth.
+* **Characteristics:** Essential for remote or difficult-to-cable sites. It features higher latency (traditionally around 250 ms, though modern low-Earth orbit providers like Starlink lower this to 20–40 ms) and can suffer from **rain fade** (signal degradation caused by heavy rain).
