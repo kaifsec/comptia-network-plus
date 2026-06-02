@@ -234,3 +234,22 @@ Ethernet standards use a specific three-part naming system (e.g., `10GBASE-T`):
 * **100BASE-TX (Fast Ethernet):** Operates at 100 Mbit/s. Uses Category 5 (or higher) twisted-pair cable. Maximum distance of 100 meters.
 * **1000BASE-T (Gigabit Ethernet):** Operates at 1000 Mbit/s (1 Gbps). Requires Category 5e (or higher) twisted-pair cable. Maximum distance of 100 meters.
 * **10GBASE-T (10 Gigabit Ethernet):** Operates at 10 Gbps. Requires Category 6 cabling (limited to 55 meters) or Category 6A cabling (reaches the full 100 meters).
+
+## Fiber Optic Communication
+
+Fiber optic cabling transmits data using light pulses through glass or plastic strands instead of electrical signals over metal. 
+
+### Cybersecurity and Physical Benefits
+* **Immune to Electromagnetic / Radio Interference (EMI/RFI):** Because it uses light instead of electricity, ambient radio noise or power cables cannot degrade the signal.
+* **Highly Secure:** It does not emit an RF (Radio Frequency) signal, making it incredibly difficult for a threat actor to physical tap or monitor the data lines without breaking the connection entirely.
+* **Long Distance:** The light signal degrades incredibly slowly, allowing data to travel over massive distances without needing a repeater.
+
+### Inner Cable Structure
+* **Fiber Core:** The center glass or plastic strand where the light ray travels.
+* **Cladding:** A surrounding layer with a lower reflective index that bounces the light back into the core, keeping the signal trapped inside.
+* **Buffer Coating:** An outer layer providing mechanical protection from moisture and physical damage.
+* **Ferrule:** The rigid, white cylindrical tip at the end of a fiber connector that perfectly aligns the core with a receiver.
+
+### Multimodem vs. Single-mode Fiber
+* **Multimode Fiber:** Uses an inexpensive light source like an LED. Light bounces off the cladding at multiple angles (modes). Perfect for short-range communication up to 2 kilometers.
+* **Single-mode Fiber:** Uses a high-powered, expensive laser beam. Light travels in a straight line down a tiny core over incredibly long ranges (up to 100 kilometers) without needing processing.
