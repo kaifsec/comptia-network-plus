@@ -253,3 +253,20 @@ Fiber optic cabling transmits data using light pulses through glass or plastic s
 ### Multimodem vs. Single-mode Fiber
 * **Multimode Fiber:** Uses an inexpensive light source like an LED. Light bounces off the cladding at multiple angles (modes). Perfect for short-range communication up to 2 kilometers.
 * **Single-mode Fiber:** Uses a high-powered, expensive laser beam. Light travels in a straight line down a tiny core over incredibly long ranges (up to 100 kilometers) without needing processing.
+
+## Copper Network Cabling and Safety
+
+Copper cabling relies on twisted electrical conductors to pass data, requiring specific structural designs to combat signal interference and adhere to building fire codes.
+
+### Twisted Pair Operation
+* **The Twist is the Secret:** Copper wires radiate electromagnetic fields that cause interference (crosstalk). Twisting the wire pairs forces them to constantly shift position relative to the interference, allowing the opposite electrical signals (+ and -) to cancel out the noise at the receiving end.
+* **Twist Rates:** Different pairs within the same cable are twisted at completely different rates (some tightly, some loosely) to prevent the pairs from bleeding signals into each other.
+
+### Specialized Copper Cable Types
+* **Coaxial Cable (RG-6):** Features a central solid wire conductor surrounded by an insulator, a braided metal shield, and an outer plastic jacket. Used for digital cable television and high-speed cable internet modems.
+* **Twinaxial Cable (Twinax):** Features two inner copper conductors sharing a common axis. Common in data centers for short-range (up to 5 meters) 10 Gigabit Ethernet server connections. Offers extremely low latency and low cost compared to standard twisted-pair or fiber.
+
+### Plenum vs. Non-Plenum Fire Safety
+* **The Plenum Space:** The open, active area above a drop ceiling or beneath a raised floor used for forced-air heating and cooling circulation.
+* **Non-Plenum Cable (PVC):** Uses a traditional Polyvinyl Chloride jacket. If it catches fire, PVC burns quickly and releases thick, highly toxic chemical smoke that can fill the building's air supply.
+* **Plenum-Rated Cable (FEP):** Uses a fire-resistant jacket made of Fluorinated Ethylene Polymer (FEP) or low-smoke PVC. It is engineered to resist melting, produce very little smoke, and emit no toxic gases if exposed to extreme heat. It is legally required by building fire codes for any cable routed through a plenum airspace.
