@@ -218,3 +218,19 @@ Wireless local area networks are defined by the IEEE 802.11 standards. Modern ge
 ### 3. Satellite Networking
 * **What it is:** Non-terrestrial communication connecting a ground-based dish antenna to a satellite orbiting Earth.
 * **Characteristics:** Essential for remote or difficult-to-cable sites. It features higher latency (traditionally around 250 ms, though modern low-Earth orbit providers like Starlink lower this to 20–40 ms) and can suffer from **rain fade** (signal degradation caused by heavy rain).
+
+## Ethernet Copper Standards
+
+Ethernet standards define the speed, transmission type, and physical cable requirements used to connect wired devices in a local network.
+
+### Naming Convention Breakdown
+Ethernet standards use a specific three-part naming system (e.g., `10GBASE-T`):
+* **Speed:** The number at the start represents the network speed (e.g., `10` = 10 Megabits, `10G` = 10 Gigabits).
+* **Signal Type:** `BASE` stands for Baseband. This means the entire cable bandwidth is dedicated to a single data channel transmission.
+* **Cable Type:** The letter at the end indicates the physical medium (e.g., `-T` stands for Twisted-pair copper cabling).
+
+### Core Ethernet Standards to Know:
+* **10BASE-T:** Operates at 10 Mbit/s over Category 3 (or higher) twisted-pair copper cable. Maximum distance of 100 meters.
+* **100BASE-TX (Fast Ethernet):** Operates at 100 Mbit/s. Uses Category 5 (or higher) twisted-pair cable. Maximum distance of 100 meters.
+* **1000BASE-T (Gigabit Ethernet):** Operates at 1000 Mbit/s (1 Gbps). Requires Category 5e (or higher) twisted-pair cable. Maximum distance of 100 meters.
+* **10GBASE-T (10 Gigabit Ethernet):** Operates at 10 Gbps. Requires Category 6 cabling (limited to 55 meters) or Category 6A cabling (reaches the full 100 meters).
